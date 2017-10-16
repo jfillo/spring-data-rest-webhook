@@ -7,6 +7,17 @@ There are two implementations in this project. One uses strictly JPA
 EntityListeners to trigger asynchronous to registered webhooks.
 The other leverages Hibernate EventListeners.
 
+### Getting Started
+Head on over to the PersonWebhookTest for an integration test that proves out the
+functionality of both implementations
+
+You can also just run this Spring Boot application and mess around with it in PostMan
+or whatever your favorite Rest client is.
+
+By default this application is configurated to run on port 5000. Head on over to
+the application.yml file to change that if you lie.
+
+
 #### JPA EntityListener approach
 
 I created the class WebhookEntityListener which implements

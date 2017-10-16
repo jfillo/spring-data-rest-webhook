@@ -3,7 +3,7 @@
 A sample Spring Boot application that attempts to
 do a very basic webhook implementation for a Spring Data Rest project.
 
-There are two implementations in this project. One uses strictly JPA
+There are two implementations in this project. One uses strictly JPA javax.persistence
 EntityListeners to trigger asynchronous http posts to registered webhooks.
 The other leverages Hibernate EventListeners with the same async action.
 
@@ -18,10 +18,10 @@ By default this application is configurated to run on port 5000. Head on over to
 the application.yml file to change that if you lie.
 
 
-#### JPA EntityListener approach
+#### JPA javax.persistence EntityListener approach
 
 I created the class WebhookEntityListener which implements
-each of the JPA persistence listener methods. In these method is where
+each of the JPA javax.persistence listener methods. In these method is where
 you'd want to retrieve your list of registered webhooks and notify any
 of them who care about the change.
 
@@ -29,7 +29,7 @@ I only implemented the @PostUpdate method, but you could easily repeat the patte
 for the other entity listener methods.
 
 Notes about this approach:
-* The JPA EntityListener methods only knows about the
+* The JPA javax.persistence EntityListener methods only knows about the
 final state of the entity during updates. You only know that it changed,
 not HOW it changed.
 * I had to write some SMELLY code to allow Spring to get a handle on the EntityListener

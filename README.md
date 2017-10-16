@@ -14,14 +14,13 @@ functionality of both implementations
 You can also just run this Spring Boot application and mess around with it in PostMan
 or whatever your favorite Rest client is.
 
-By default this application is configurated to run on port 5000. Head on over to
-the application.yml file to change that if you lie.
-
+By default this application is configurated to run on port 5000. The application.yml file has a property
+to change that if you'd rather use a different port.
 
 #### JPA javax.persistence EntityListener approach
 
 I created the class WebhookEntityListener which implements
-each of the JPA javax.persistence listener methods. In these method is where
+each of the JPA javax.persistence listener methods. These method are where
 you'd want to retrieve your list of registered webhooks and notify any
 of them who care about the change.
 

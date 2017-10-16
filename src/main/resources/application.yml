@@ -1,0 +1,8 @@
+server:
+  port: 5000
+
+spring:
+  data:
+    rest:
+      return-body-on-create: true
+      return-body-on-update: true

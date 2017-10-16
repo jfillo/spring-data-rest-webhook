@@ -4,8 +4,8 @@ A sample Spring Boot application that attempts to
 do a very basic webhook implementation for a Spring Data Rest project.
 
 There are two implementations in this project. One uses strictly JPA
-EntityListeners to trigger asynchronous to registered webhooks.
-The other leverages Hibernate EventListeners.
+EntityListeners to trigger asynchronous http posts to registered webhooks.
+The other leverages Hibernate EventListeners with the same async action.
 
 ### Getting Started
 Head on over to the PersonWebhookTest for an integration test that proves out the
